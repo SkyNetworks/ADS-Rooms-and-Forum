@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AVL Homes</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
+  <link href="assets/css/dcalendar.picker.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/header.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/city.css"  media="screen,projection"/>
+  <script src="https://use.fontawesome.com/4ef4ce7ce4.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script>
+  
+  function myFunction() {
+    var img = document.getElementsByClassName("image-fit");
+    var card = document.getElementsByClassName("card-image");
+    var hor = document.getElementsByClassName("horizontal");
+      for(var i=0; i<img.length; i++)	
+      {	var h = img[i].height;
+    	var w = img[i].width;
+    	console.log(h);    	
+	    h = (170 - h)/2;
+	    w = (170 - w)/2;
+	    hor[i].style.height = "170px";
+    	img[i].style.marginLeft = w+"px";
+    	img[i].style.marginRight = w+"px";
+    	card[i].style.paddingTop = h+"px"; 
+    	card[i].style.paddingBottom = h+"px"; 	   }
+    }
+  </script>
+</head>
+<body>
+  <div class="avl-header avl-container">
+	<a href="index.html">
+		<img src="assets/images/logo.png">
+		<h5>AVL ROOMS</h5>
+	</a>
+	<ul>
+	  <a href="accomodate.html"><li>ACCOMODATE</li></a>
+	  <a class="modal-trigger" href="#login"><li>LOGIN</li></a>
+	  <a class="modal-trigger" href="#signup"><li>SIGN UP</li></a>
+	</ul>
+  </div>
+  <div id="login" class="modal tagline">
+   <form method="get" action="">
+	<div class="modal-content m-container">
+	   <div class="avl-heading">
+			<h4>Login</h4>
+			<div></div>
+	   </div>
+	   <div class="row">
+		<div class="input-field col s12">
+		  <input placeholder="Email ID" id="Email_id" type="text" class="validate">
+		  <label for="Email_id">Email ID</label>
+		</div>
+		<div class="input-field col s12">
+		  <input placeholder="*******" id="password" type="password" class="validate">
+		  <label for="password">Password</label>
+		</div>
+	  </div>
+	</div>
+	<div class="modal-footer ">
+	  <button class="modal-button" type="submit" >Login</button>
+	</div>
+   </form>
+  </div>
+  <div id="signup" class="modal tagline">
+	<form method="get" action="">
+	  <div class="modal-content m-container">
+		  <div class="avl-heading">
+			<h4>Sign Up</h4>
+			<div></div>
+		  </div>
+		  <div class="row">
+			<div class="input-field col s12 m6 l6">
+			  <input id="first_name" type="text" class="validate">
+			  <label for="first_name">First Name</label>
+			</div>
+			<div class="input-field col s12 m6 l6">
+			  <input id="last_name" type="text" class="validate">
+			  <label for="last_name">Last Name</label>
+			</div>
+			<div class="input-field col s12 m12 l12">
+			  <input id="email" type="text" class="validate">
+			  <label for="email">E-mail</label>
+			</div>
+			<div class="input-field col s12 m12 l12">
+			  <input id="password" type="text" class="validate">
+			  <label for="password">Password</label>
+			</div>
+			<div class="input-field col s12 m12 l12">
+			  <input id="mobno" type="text" class="validate">
+			  <label for="mobno">Mobile Number</label>
+			</div>
+			<div class="input-field col s12 m6 l6">
+			  <input id="city" type="text" class="validate">
+			  <label for="city">City</label>
+			</div>
+			<div class="input-field col s12 m6 l6">
+			  <input id="state" type="text" class="validate">
+			  <label for="state">State</label>
+			</div>
+		  </div>
+		  <div class="modal-footer ">
+			<button style="float: right;" class="modal-button" type="submit" >Sign Up</button>
+		  </div>
+	  </div>
+	</form>
+  </div>
+  <div class="row filter-fix">
+     <div class="col m3 l2 filter hide-on-small-only">
+		<form class="houseType">
+          <h5>Type of House</h5>
+            <ul>
+              <li>
+                <input class="filled-in" type="checkbox" id="3BHK" />
+  				<label for="3BHK">3 BHK</label>
+  			  </li>
+              <li>
+              	<input class="filled-in" type="checkbox" id="2BHK" />
+  				<label for="2BHK">2 BHK</label>
+  			  </li>
+              <li>
+              	<input class="filled-in" type="checkbox" id="1BHK" />
+  				<label for="1BHK">1 BHK</label>
+  			  </li>
+  			  <li>
+              	<input class="filled-in" type="checkbox" id="SHARING" />
+  				<label for="SHARING">Single Room</label>
+  			  </li>
+              <li>
+              	<input class="filled-in" type="checkbox" id="PG" />
+  				<label for="PG">Paying Guest</label>
+  			  </li>
+  			  <li>
+              	<input class="filled-in" type="checkbox" id="Shared Room" />
+  				<label for="Shared Room">Shared Room</label>
+  			  </li>
+  			  <li>
+              	<input class="filled-in" type="checkbox" id="Furnished" />
+  				<label for="Furnished">Furnished</label>
+  			  </li>
+            </ul>
+          <h5>Price Range</h5>
+          <div class="priceRange">
+            <ul>
+              <li>
+                <input class="filled-in" type="checkbox" id="1000-3000" />
+  				<label for="1000-3000">1000-3000</label>
+  			  </li>
+              <li>
+              	<input class="filled-in" type="checkbox" id="3000-5000" />
+  				<label for="3000-5000">3000-5000</label>
+  			  </li>
+              <li>
+              	<input class="filled-in" type="checkbox" id="5000-8000" />
+  				<label for="5000-8000">5000-8000</label>
+  			  </li>
+              <li>
+              	<input class="filled-in" type="checkbox" id="8000-12000" />
+  				<label for="8000-12000">5000-8000</label>
+  			  </li>
+  			  <li>
+              	<input class="filled-in" type="checkbox" id="12000+" />
+  				<label for="12000+">12000+</label>
+  			  </li>
+            </ul>
+          </div>
+	    </form>
+	 </div>
+	 <div class="col offset-m3 m19 offset-l2 l10 houses">
+	    <h5 style="text-align:center">VELLORE</h5>
+	    <div class="row card-container">
+		  <div class="col s12 m12 l6">
+			<a href="room.html">
+			<div class="card horizontal">
+			  <div style="background-image:url(assets/images/sample/2.jpg)" class="card-image">
+			  </div>
+			  <div class="card-stacked">
+				<div class="card-content">
+					<div class="row no-margin">
+						<div class="col s12 m8 l8 loc">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>LOCATION</p>
+							 <div></div>
+						  </div>
+						  <p>New Palasia, Indore</p>
+						</div>
+						<div class="col s12 m4 l4 rent">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>RENT</p>
+							 <div></div>
+						  </div>      	  
+						  <p>₹10000</p>
+						</div>
+					</div>
+					<div class="row no-margin">
+						<div class="col s12">
+							<div class="chip">
+								<p>3BHK</p>
+							</div>
+							<div class="chip">
+								<p>Furnished</p>
+							</div>
+							<div class="chip">
+								<p>Parking</p>
+							</div>
+							<div class="chip">
+								<p>Balcony</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			</a>
+		  </div>
+		  <div class="col s12 m12 l6">
+			<a href="">
+			<div class="card horizontal">
+			  <div style="background-image:url(assets/images/sample/3.jpg)" class="card-image">
+			  </div>
+			  <div class="card-stacked">
+				<div class="card-content">
+					<div class="row no-margin">
+						<div class="col s12 m8 l8 loc">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>LOCATION</p>
+							 <div></div>
+						  </div>
+						  <p>New Palasia, Indore</p>
+						</div>
+						<div class="col s12 m4 l4 rent">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>RENT</p>
+							 <div></div>
+						  </div>      	  
+						  <p>₹10000</p>
+						</div>
+					</div>
+					<div class="row no-margin">
+						<div class="col s12">
+							<div class="chip">
+								<p>3BHK</p>
+							</div>
+							<div class="chip">
+								<p>Furnished</p>
+							</div>
+							<div class="chip">
+								<p>Parking</p>
+							</div>
+							<div class="chip">
+								<p>Balcony</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			</a>
+		  </div>
+		  <div class="col s12 m12 l6">
+			<a href="">
+				<div class="card horizontal">
+				  <div style="background-image:url(assets/images/sample/1.jpg)" class="card-image">
+				  </div>
+				  <div class="card-stacked">
+					<div class="card-content">
+						<div class="row no-margin">
+							<div class="col s12 m8 l8 loc">
+							  <div class="avl-c-heading m-b hide-on-small-only">
+								 <p>LOCATION</p>
+								 <div></div>
+							  </div>
+							  <p>New Palasia, Indore</p>
+							</div>
+							<div class="col s12 m4 l4 rent">
+							  <div class="avl-c-heading m-b hide-on-small-only">
+								 <p>RENT</p>
+								 <div></div>
+							  </div>      	  
+							  <p>₹10000</p>
+							</div>
+						</div>
+						<div class="row no-margin">
+							<div class="col s12">
+								<div class="chip">
+									<p>3BHK</p>
+								</div>
+								<div class="chip">
+									<p>Furnished</p>
+								</div>
+								<div class="chip">
+									<p>Parking</p>
+								</div>
+								<div class="chip">
+									<p>Balcony</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+				</div>
+			</a>
+		  </div>
+		  <div class="col s12 m12 l6">
+			<a href="">
+			<div class="card horizontal">
+			  <div style="background-image:url(assets/images/sample/2.jpg)" class="card-image">
+			  </div>
+			  <div class="card-stacked">
+				<div class="card-content">
+					<div class="row no-margin">
+						<div class="col s12 m8 l8 loc">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>LOCATION</p>
+							 <div></div>
+						  </div>
+						  <p>New Palasia, Indore</p>
+						</div>
+						<div class="col s12 m4 l4 rent">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>RENT</p>
+							 <div></div>
+						  </div>      	  
+						  <p>₹10000</p>
+						</div>
+					</div>
+					<div class="row no-margin">
+						<div class="col s12">
+							<div class="chip">
+								<p>3BHK</p>
+							</div>
+							<div class="chip">
+								<p>Furnished</p>
+							</div>
+							<div class="chip">
+								<p>Parking</p>
+							</div>
+							<div class="chip">
+								<p>Balcony</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			</a>
+		  </div>
+		  <div class="col s12 m12 l6">
+			<a href="">
+			<div class="card horizontal">
+			  <div style="background-image:url(assets/images/sample/2.jpg)" class="card-image">
+			  </div>
+			  <div class="card-stacked">
+				<div class="card-content">
+					<div class="row no-margin">
+						<div class="col s12 m8 l8 loc">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>LOCATION</p>
+							 <div></div>
+						  </div>
+						  <p>New Palasia, Indore</p>
+						</div>
+						<div class="col s12 m4 l4 rent">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>RENT</p>
+							 <div></div>
+						  </div>      	  
+						  <p>₹10000</p>
+						</div>
+					</div>
+					<div class="row no-margin">
+						<div class="col s12">
+							<div class="chip">
+								<p>3BHK</p>
+							</div>
+							<div class="chip">
+								<p>Furnished</p>
+							</div>
+							<div class="chip">
+								<p>Parking</p>
+							</div>
+							<div class="chip">
+								<p>Balcony</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			</a>
+		  </div>
+		  <div class="col s12 m12 l6">
+			<a href="">
+			<div class="card horizontal">
+			  <div style="background-image:url(assets/images/sample/3.jpg)" class="card-image">
+			  </div>
+			  <div class="card-stacked">
+				<div class="card-content">
+					<div class="row no-margin">
+						<div class="col s12 m8 l8 loc">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>LOCATION</p>
+							 <div></div>
+						  </div>
+						  <p>New Palasia, Indore</p>
+						</div>
+						<div class="col s12 m4 l4 rent">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>RENT</p>
+							 <div></div>
+						  </div>      	  
+						  <p>₹10000</p>
+						</div>
+					</div>
+					<div class="row no-margin">
+						<div class="col s12">
+							<div class="chip">
+								<p>3BHK</p>
+							</div>
+							<div class="chip">
+								<p>Furnished</p>
+							</div>
+							<div class="chip">
+								<p>Parking</p>
+							</div>
+							<div class="chip">
+								<p>Balcony</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			</a>
+		  </div>
+		  <div class="col s12 m12 l6">
+			<a href="">
+				<div class="card horizontal">
+				  <div style="background-image:url(assets/images/sample/1.jpg)" class="card-image">
+				  </div>
+				  <div class="card-stacked">
+					<div class="card-content">
+						<div class="row no-margin">
+							<div class="col s12 m8 l8 loc">
+							  <div class="avl-c-heading m-b hide-on-small-only">
+								 <p>LOCATION</p>
+								 <div></div>
+							  </div>
+							  <p>New Palasia, Indore</p>
+							</div>
+							<div class="col s12 m4 l4 rent">
+							  <div class="avl-c-heading m-b hide-on-small-only">
+								 <p>RENT</p>
+								 <div></div>
+							  </div>      	  
+							  <p>₹10000</p>
+							</div>
+						</div>
+						<div class="row no-margin">
+							<div class="col s12">
+								<div class="chip">
+									<p>3BHK</p>
+								</div>
+								<div class="chip">
+									<p>Furnished</p>
+								</div>
+								<div class="chip">
+									<p>Parking</p>
+								</div>
+								<div class="chip">
+									<p>Balcony</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+				</div>
+			</a>
+		  </div>
+		  <div class="col s12 m12 l6">
+			<a href="">
+			<div class="card horizontal">
+			  <div style="background-image:url(assets/images/sample/2.jpg)" class="card-image">
+			  </div>
+			  <div class="card-stacked">
+				<div class="card-content">
+					<div class="row no-margin">
+						<div class="col s12 m8 l8 loc">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>LOCATION</p>
+							 <div></div>
+						  </div>
+						  <p>New Palasia, Indore</p>
+						</div>
+						<div class="col s12 m4 l4 rent">
+						  <div class="avl-c-heading m-b hide-on-small-only">
+							 <p>RENT</p>
+							 <div></div>
+						  </div>      	  
+						  <p>₹10000</p>
+						</div>
+					</div>
+					<div class="row no-margin">
+						<div class="col s12">
+							<div class="chip">
+								<p>3BHK</p>
+							</div>
+							<div class="chip">
+								<p>Furnished</p>
+							</div>
+							<div class="chip">
+								<p>Parking</p>
+							</div>
+							<div class="chip">
+								<p>Balcony</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			</a>
+		  </div>  
+	    </div>        	
+	 </div>
+  </div>
+  <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/dcalendar.picker.js"></script>
+  <script>
+  $(document).ready(function(){
+   $('#login').modal();
+   $('#signup').modal({
+      endingTop: '0', // Ending top style attribute
+   });
+  });
+  </script>
+</body>
+</html>

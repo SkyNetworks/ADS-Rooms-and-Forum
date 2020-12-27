@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+project Ads room setup
+1.unzip ADS-Rooms.zip
+2 move  C:\xampp\htdocs
+3 open xampp control panel and start server
+3.open chrome and tpye localhost
+4 go to php my admin and crerate new database users AND idiscuss
+5. import database.sql file  and iduscuss.sql file in idiscuss database
+6. open new tab and type http://localhost/ADS-Rooms/
+  THANS 

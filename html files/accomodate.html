@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AVL Homes</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/normalize.css"  media="screen,projection"/>  
+  <link type="text/css" rel="stylesheet" href="assets/css/set2.css"  media="screen,projection"/>  
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>  
+  <link type="text/css" rel="stylesheet" href="assets/css/header.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="accomodate.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="assets/css/validin.css" type="text/css" media="all" />
+  <script src="https://use.fontawesome.com/4ef4ce7ce4.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <div class="avl-header avl-container">
+	<a href="index.html">
+		<img src="assets/images/logo.png">
+		<h5>AVL ROOMS</h5>
+	</a>
+	<ul>
+		<a href=""><li>ACCOMODATE</li></a>
+		<a href=""><li>LOGIN</li></a>
+		<a href=""><li>SIGN UP</li></a>
+	</ul>
+  </div>
+<!--HEADER-->
+  <div class="avl-container">
+  	<div class="tagline">
+  	  <h4>Looking for a <span>Tenant</span></h4>
+  	  <h3>Join our large family of happy landlords.</h3>
+  	</div>
+  </div>
+<!--Page 1-->
+  <form name="myForm" action="" onsubmit="return validateForm()">
+  <div class="avl-container">
+  <div class="form-border">
+    <h4>Personal Details</h4>
+    <div class="header-underline"></div>
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <p>First Name</p>
+          <input id="name" name="fname" type="text" class="validate" placeholder="John Doe" validate="name" required>
+        </div>
+		    <div class="input-field col s12 m6 l6">
+          <p>Last Name</p>
+          <input id="lname" type="text" placeholder="Name" class="validate" validate="name" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">  
+          <p>Phone Number</p>
+        </div>  
+        <div class="input-field col s12 m6 l6">
+          <input id="num1" type="text" placeholder="Calling" class="validate" validate="phone" required>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <input id="num2" type="text" placeholder="Whatsapp" class="validate" validate="phone">
+        </div>        
+      </div>
+      <div class="row">
+	    <div class="input-field col s12 m6 l6">
+          <p>E-mail</p>
+          <input id="email" type="email" placeholder="abc@example.com" class="validate" validate="email" required>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <p>Profession</p>
+          <input id="profession" type="text" class="validate" placeholder="Your profession" validate="alpha">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">  
+          <p>Current Address</p>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <input id="city" type="text" placeholder="City" class="validate" validate="alpha_num_dash" required>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <input id="country" type="text" placeholder="State" class="validate" validate="alpha_num_dash" required>
+        </div>        
+      </div>  
+  </div>  
+  </div> 
+<!--Page 2-->
+  <div class="avl-container hide-pop" id="pg2">
+  <div class="form-border"> 
+    <h4>Accomodation Details</h4>
+    <div class="header-underline"></div>
+    <div class="row">
+      <div class="col s12 m6 l6">
+        <h5>House Type</h5>
+      </div>
+    </div>      
+    <div class="row option-margin">
+        <p class="col s12 m6 l6">
+          <input class="with-gap" name="group1" type="radio" id="test1" checked/>
+          <label for="test1">3 BHK</label>
+        </p>
+        <p class="col s12 m6 l6">
+          <input class="with-gap" name="group1" type="radio" id="test2" />
+          <label for="test2">2 BHK</label>
+        </p>
+        <p class="col s12 m6 l6">
+          <input class="with-gap" name="group1" type="radio" id="test3" />
+          <label for="test3">1 BHK</label>
+        </p>
+        <p class="col s12 m6 l6">
+          <input class="with-gap" name="group1" type="radio" id="test4" />
+          <label for="test4">Single Room</label>
+        </p>
+        <p class="col s12 m6 l6">
+          <input class="with-gap" name="group1" type="radio" id="test5" />
+          <label for="test5">Shared Room</label>
+        </p>
+        <p class="col s12 m6 l6">
+          <input class="with-gap" name="group1" type="radio" id="test6" />
+          <label for="test6">Paying Guest</label>
+        </p> 
+    </div> 
+	    <div class="row option-margin">
+      <p class="col s12"><b>Others:</b></p>                                                       
+	    <p class="col s6 m3 l3">
+	      <input type="checkbox" class="filled-in" id="storeroom"/>
+	      <label class="check-pos" for="storeroom"></label>
+	      Store Room
+	    </p>         
+	    <p class="col s6 m3 l3">
+	      <input type="checkbox" class="filled-in" id="bolcony"/>
+	      <label class="check-pos" for="bolcony"></label>
+	      Balcony
+	    </p>
+    </div>
+    <div class="row">    
+      <p class="col s12 m2 l2"><b>Parking:</b></p>                                       
+      <p class="col s12 m2 l2">
+        <input type="checkbox" class="filled-in" id="no-w" onclick="change(this)"/>
+        <label for="no-w">None</label>
+      </p> 
+      <p class="col s12 m2 l2">
+        <input type="checkbox" class="filled-in prefnot" id="2-w" onclick="deselect(this)"/>
+        <label for="2-w">Two-Wheeler</label>
+      </p>
+      <p class="col s12 m2 l2">
+        <input type="checkbox" class="filled-in prefnot" id="4-w" onclick="deselect(this)"/>
+        <label for="4-w">Four-Wheeler</label>
+      </p>                      
+    </div>
+    <div class="row">
+	  <p class="col s4 m2 l2">Description</p>
+	  <div class="input-field col s8 m9 l9">
+		<textarea id="textarea1" class="materialize-textarea"></textarea>
+	  </div>
+	</div>    
+  </div>  
+  </div>   
+<!--PAGE 3-->
+  <div class="avl-container hide-pop" id="pg3">
+    <div class="form-border">
+    <h4>Tenant Preferences</h4>
+    <div class="header-underline"></div>    
+    <div class="option-margin">
+    <div class="row pref-padding">
+		  <p class="col s6 m5 l5">
+	      <input type="checkbox" class="filled-in" id="check8" onclick="toggle(this)"/>
+	      <label class="check-pos" for="check8">All</label>
+	    </p>
+      <p class="col s6 m7 l7">
+	      <input type="checkbox" class="filled-in pref" name="check2" id="check2" />
+	      <label for="check2">Bachelor</label>
+	    </p> 
+    </div>
+    <div class="row pref-padding">      
+	    <p class="col s6 m5 l5">
+	      <input type="checkbox" class="filled-in pref" name="check3" id="check3" />
+	      <label for="check3">Married couples</label>
+	    </p> 
+	    <p class="col s6 m7 l7">
+	      <input type="checkbox" class="filled-in pref" name="check4" id="check4" />
+	      <label for="check4">Family</label>
+	    </p>
+    </div> 
+    <div class="row pref-padding">     
+	    <p class="col s6 m5 l5">
+	      <input type="checkbox" class="filled-in pref" name="check5" id="check5" />
+	      <label for="check5">Unmarried couples</label>
+	    </p>
+	    <p class="col s6 m7 l7">
+	      <input type="checkbox" class="filled-in pref" name="check6" id="check6" />
+	      <label for="check6">Boys</label>
+	    </p>
+    </div> 
+    <div class="row pref-padding">     
+	    <p class="col s6 m5 l5">
+	      <input type="checkbox" class="filled-in pref" name="check7" id="check7" />
+	      <label for="check7">Girls</label>
+	    </p>
+    </div>
+    </div>
+    <h5>Other Restrictions</h5>
+      <div class="row">
+        <p class="col s9">
+	      <input type="checkbox" class="filled-in" name="check9" id="check9" />
+	      <label for="check9">Smoking</label>
+	    </p> 
+	    <p class="col s9">
+	      <input type="checkbox" class="filled-in" name="check10" id="check10" />
+	      <label for="check10">Alcohol</label>
+	    </p> 
+	    <p class="col s9">
+	      <input type="checkbox" class="filled-in" name="check11" id="check11" />
+	      <label for="check11">Non-veg food</label>
+	    </p>
+	  </div>
+	  <div class="row">
+	    <p class="col s4 m2 l2">
+	      Any Others...
+        </p>
+        <div class="input-field col s8 m5 l5">
+          <textarea id="textarea2" class="materialize-textarea" placeholder="Mention any other restrictions"></textarea>
+        </div>  
+      </div>
+    </div>
+  </div>
+<!--PAGE 4-->
+  <div class="avl-container hide-pop" id="pg4">
+    <div class="form-border">
+    <h4>House Details</h4>
+    <div class="header-underline"></div>    
+      <h5>House Address</h5>
+      <div class="row">
+        <div class="input-field col s3 m2 l2">
+          <p>Street Address</p>
+        </div>      
+        <div class="input-field col s8">
+          <input id="name" type="text" placeholder="Flat/House No./House Name/Building" class="validate" validate="alpha_num_dash" required>
+        </div>
+        <div class="input-field col s8 offset-s3 m8 offset-m2">
+          <input id="name" type="text" placeholder="Colony/Street/Locality" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s3 m2 l2">
+          <p>Landmark</p>
+        </div>
+        <div class="input-field col s8">
+          <input id="name" type="text" placeholder="Eg. Near VIT Vellore" class="validate" validate="alpha_num_dash" required>
+        </div>        
+      </div>
+        <div class="row">
+	      <div class="input-field col s3 m2 l2">
+	        <p>City</p>
+	      </div>
+	      <div class="input-field col s8 m4 l4">
+	        <input id="name" type="text" placeholder="Eg. Mumbai" class="validate" validate="alpha_num_dash" required>
+	      </div>
+	      <div class="input-field col s3 m2 l2">
+	        <p>State</p>
+	      </div>      
+	      <div class="input-field col s8 m4 l4">
+	        <input id="name" type="text" placeholder="Eg. Tamil Nadu" class="validate" validate="alpha_num_dash" required>
+	      </div>         
+	    </div> 	 
+        <div class="row">
+	      <div class="input-field col s3 m2 l2">
+	        <p>Pincode</p>
+	      </div>      
+	      <div class="input-field col s8 m4 l4">
+	        <input id="name" type="text" placeholder="Eg. 100001" class="validate" validate="zip" required>
+	      </div>      
+	      <div class="input-field col s3 m2 l2">
+	        <p>Contact No.</p>
+	      </div>      
+	      <div class="input-field col s8 m4 l4">
+	        <input id="name" type="text" placeholder="+91" class="validate" validate="phone" required>
+	      </div> 	         
+	    </div> 	       
+      <div class="option-margin"></div>
+      <h5>Images</h5>
+      <p>Min - 2, Max - 4</p>
+      <div class="row option-margin">
+        <div class="file-field input-field col s11 m7 l7">
+          <div class="btn">
+            <span>File</span>
+            <input type="file">
+          </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+      </div>
+      </div> 
+      <h5>Charges</h5>
+        <div class="row">
+		  <div class="input-field col s11 m7 l7">
+	        <input id="textarea3" class="materialize-textarea" placeholder="Enter charges including all costs (in Rs)" validate="alpha_num_dash" required>
+	      </div>
+	    </div>  
+    </div>
+   </div> 
+    <a href="#" class="waves-effect waves-light next button-center" style="padding-right: 5px;" onclick="popup(this)"><i class="material-icons right">chevron_right</i>Next</a>     
+    <button type="submit" class="button-center hide-pop" id="bt">Submit<i class="material-icons right sub-icon">send</i></button>  
+  </form>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/validin.js"></script>  
+<script>
+$('form').validin();
+
+function toggle(source) {
+  checkboxes = document.getElementsByClassName('pref');
+  for(var i=0, n=checkboxes.length; i<n; i++) {
+	checkboxes[i].checked = source.checked;
+  }
+}
+function change(source) {
+  checkboxes = document.getElementsByClassName('prefnot');
+
+  if(source.checked==true){ 
+  for(var i=0, n=checkboxes.length; i<n; i++) {
+    checkboxes[i].checked = false;
+  } }
+} 
+
+function deselect(source){
+  x = document.getElementById("no-w");
+  if(source.checked==true){
+    x.checked = false;
+  }
+}
+
+
+var flag = 0;
+function popup(source){
+  var w = document.getElementById("pg1");
+  var x = document.getElementById("pg2");
+  var y = document.getElementById("pg3");
+  var z = document.getElementById("pg4");
+  var btn = document.getElementById("bt");
+  if(flag == 0){
+  x.style.display = "block";
+  source.href = "#pg2";
+  flag++;
+  }
+  else if(flag == 1){
+    y.style.display = "block";
+    y.style.height = "100%";
+    flag++;
+    source.href = "#pg3";
+  }
+  else if(flag == 2){
+    z.style.display = "block";
+    z.style.height = "100%";
+    flag++;
+    source.style.display = "none";
+    btn.style.display = "block";
+    btn.style.height = "100%";
+    source.href = "#pg4";
+  }
+}
+
+  $(document).ready(function(){  
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+
+  });
+
+</script> 
+
+</body>
+</html>

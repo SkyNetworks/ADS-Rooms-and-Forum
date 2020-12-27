@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AVL Homes</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
+  <link href="assets/css/dcalendar.picker.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/style.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="assets/css/header.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="assets/css/house.css" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+  <script src="https://use.fontawesome.com/4ef4ce7ce4.js"></script>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+</head>
+<body>
+  <div class="avl-header avl-container">
+	<a href="index.html">
+		<img src="assets/images/logo.png">
+		<h5>AVL ROOMS</h5>
+	</a>
+	<ul>
+	  <a href="accomodate.html"><li>ACCOMODATE</li></a>
+	  <a class="modal-trigger" href="#login"><li>LOGIN</li></a>
+	  <div id="login" class="modal tagline">
+	   <form method="get" action="">
+		<div class="modal-content m-container">
+		   <div class="avl-heading">
+				<h4>Login</h4>
+				<div></div>
+		   </div>
+		   <div class="row">
+			<div class="input-field col s12">
+			  <input placeholder="Email ID" id="Email_id" type="text" class="validate">
+			  <label for="Email_id">Email ID</label>
+			</div>
+			<div class="input-field col s12">
+			  <input placeholder="*******" id="password" type="password" class="validate">
+			  <label for="password">Password</label>
+			</div>
+		  </div>
+		</div>
+		<div class="modal-footer ">
+		  <button class="modal-button" type="submit" >Login</button>
+		</div>
+	   </form>
+	  </div>
+	  <a class="modal-trigger" href="#signup"><li>SIGN UP</li></a>
+	  <div id="signup" class="modal tagline">
+	    <form method="get" action="">
+		  <div class="modal-content m-container">
+			  <div class="avl-heading">
+				<h4>Sign Up</h4>
+				<div></div>
+			  </div>
+			  <div class="row">
+				<div class="input-field col s12 m6 l6">
+				  <input id="first_name" type="text" class="validate">
+				  <label for="first_name">First Name</label>
+				</div>
+				<div class="input-field col s12 m6 l6">
+				  <input id="last_name" type="text" class="validate">
+				  <label for="last_name">Last Name</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+				  <input id="email" type="text" class="validate">
+				  <label for="email">E-mail</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+				  <input id="password" type="text" class="validate">
+				  <label for="password">Password</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+				  <input id="mobno" type="text" class="validate">
+				  <label for="mobno">Mobile Number</label>
+				</div>
+				<div class="input-field col s12 m6 l6">
+				  <input id="city" type="text" class="validate">
+				  <label for="city">City</label>
+				</div>
+				<div class="input-field col s12 m6 l6">
+				  <input id="state" type="text" class="validate">
+				  <label for="state">State</label>
+				</div>
+			  </div>
+			  <div class="modal-footer ">
+				<button style="float: right;" class="modal-button" type="submit" >Sign Up</button>
+			  </div>
+		  </div>
+	    </form>
+	  </div>
+	</ul>
+  </div>
+	<div class="house-container">
+	<br>
+    <div class="row mt">
+	  <div class="col l7 m7 s12">
+		<div class="img-slider">
+		  <div class="avl-h-heading m-b">
+			 <p>House Pictures</p>
+			 <div></div>
+		  </div>
+		  <div class="house-img">
+			<div style="background-image:url('assets/images/sample/1.jpg')"></div>
+			<div style="background-image:url('assets/images/sample/2.jpg')"></div>
+			<div style="background-image:url('assets/images/sample/3.jpg')"></div>
+			<div style="background-image:url('assets/images/sample/2.jpg')"></div>
+		  </div>
+		  <div class="house-img-nav">
+			<div class="house-img-nav-div" style="background-image:url('assets/images/sample/1.jpg')"></div>
+			<div class="house-img-nav-div" style="background-image:url('assets/images/sample/2.jpg')"></div>
+			<div class="house-img-nav-div" style="background-image:url('assets/images/sample/3.jpg')"></div>
+			<div class="house-img-nav-div" style="background-image:url('assets/images/sample/2.jpg')"></div>
+		  </div>
+		</div>
+	  </div>
+      <div class="col l5 m5 s12">
+		<div class="row">
+		  <div class="col s12 m6 l7 pd-0">
+			  <div class="avl-h-heading">
+				 <p>House Details</p>
+				 <div></div>
+			  </div>
+			  <ul class="disc">
+				<li class="owner-name">Vedant Jain</li>
+				<li><i class="material-icons">work</i> &nbsp; Buissnessman</li>
+				<li><i class="material-icons">location_on</i>  &nbsp; Palasiya, Indore</i></li>
+			  </ul>
+		  </div>
+		  <div class="col s12 m6 l5 pd-0">
+			  <div class="avl-h-heading">
+				 <p>House Rent</p>
+				 <div></div>
+			  </div>
+			  <ul class="disc">
+				<li class="owner-name">₹4600</li>
+				<li>per month</li>
+			  </ul>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col s12 m12 l12 pd-0">
+			  <div class="avl-h-heading">
+				 <p>House Description</p>
+				 <div></div>
+			  </div>
+			  <p class="desc">This accomodation is in a very safe and clean colony. There is 24 hr water supply and electricity. There is a shoping mall nearby. Also there is a garden in front for childrens to play.</p>
+		  </div>
+		</div>
+        <table class="striped">
+			<thead>
+			   <div class="avl-h-heading">
+				  <p>House Specifications</p>
+				  <div></div>
+			   </div>
+			</thead>
+			<br>
+			<tbody>
+			  <tr>
+				<td>House Type</td>
+				<td>3 BHK</td>
+			  </tr>
+			  <tr>
+				<td>Store Room</td>
+				<td>Yes</td>
+			  </tr>
+			  <tr>
+				<td>Balcony</td>
+				<td>No</td>
+			  </tr>
+			  <tr>
+				<td>Parking Type</td>
+				<td>Two Wheeler</td>
+			  </tr>
+			</tbody>
+        </table>
+		<div class="row other-details">
+			<div class="col l6 m6 s12 pd-0">
+			  <div class="avl-h-heading">
+					<p>Tenant Preferences</p>
+					<div></div>
+			  </div>
+			  <ul>
+				<li>Married</li>
+				<li>un-Married</li>
+			  </ul>
+			</div>
+			<div class="col l6 m6 s12 pd-0">
+			  <div class="avl-h-heading">
+				<p>Other Restrictions</p>
+				<div></div>
+			  </div>
+			  <ul>
+				<li>Smoking</li>
+				<li>Non-veg Food</li>
+			  </ul>
+			</div>
+		</div>
+	   </div>
+    </div>
+	<div class="row" align="center">
+		<button class="btn waves-effect waves-light" name="action">Visit House
+			<i class="material-icons right">send</i>
+		</button>
+	</div>
+    </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/dcalendar.picker.js"></script>
+  <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+  $(document).ready(function(){
+  
+   //Start main image slider
+   var w = $(".house-img").outerWidth();
+   var h = w * 0.5578;
+   $('.house-img div').css("height",h);
+   $('.house-img').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	fade: true,
+	asNavFor: '.house-img-nav'
+   });
+   //image slider end
+   
+   //Start nav image slider
+   var navw = $(".house-img-nav div").outerWidth();
+   var navh = h * 0.25;
+   $('.house-img-nav div').css("height",navh);
+   $('.house-img-nav').slick({
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	asNavFor: '.house-img',
+	dots: true,
+	centerMode: true,
+	arrows:false,
+	focusOnSelect: true
+   });
+   //image slider end
+   
+   $('#moveInDate').dcalendarpicker();
+   $('#login').modal();
+   $('#signup').modal({
+      endingTop: '0', // Ending top style attribute
+   });
+  });
+  </script>
+</body>
+</html>

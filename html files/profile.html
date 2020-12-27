@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AVL Homes</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
+  <link href="assets/css/dcalendar.picker.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/profile.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="assets/css/header.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="assets/css/footer.css" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+  <script src="https://use.fontawesome.com/4ef4ce7ce4.js"></script>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/dcalendar.picker.js"></script>
+  <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+  
+
+</head>
+<body>
+  <div class="avl-header avl-container">
+	<a href="index.php">
+		<img src="assets/images/logo.png">
+		<h5>AVL ROOMS</h5>
+	</a>
+	<ul>
+	<!-- <li><a href="accomodate.html">ACCOMODATE</a></li> -->
+
+	  <li><?php if(isset($_SESSION['username'])) { ?>
+		   		<a href="accomodate.php">ACCOMODATE</a>
+		  <?php } ?>
+		  <?php  if(!isset($_SESSION['username'])) { ?>
+		   		<a class="modal-trigger" href="#login">ACCOMODATE</a>
+		  <?php } ?>
+	  </li>
+	  <li><?php if(!isset($_SESSION['username'])) { ?>
+		   		<a class="modal-trigger" href="#login">LOGIN</a>
+		  <?php } ?>
+		  <?php  if(isset($_SESSION['username'])) { ?>
+		   		<a class="modal-trigger" href="#">
+					<?php echo strtoupper($first_name)." ".strtoupper($last_name) ?>
+				</a>
+		  <?php } ?>
+	  </li>
+	  <div id="login" class="modal tagline">
+	   <form method="POST" action="index.php">
+		<div class="modal-content m-container">
+		   <div class="avl-heading">
+		   <h4>Login</h4>
+		   <div></div>
+		   </div>
+		   <div class="row">
+			<div class="input-field col s12">
+			  <input placeholder="Email ID" id="Email_id" type="text" class="validate" name="login_username">
+			  <label for="Email_id">Email ID</label>
+			</div>
+			<div class="input-field col s12">
+			  <input placeholder="*******" id="password" type="password" class="validate" name="login_password">
+			  <label for="password">Password</label>
+			</div>
+		  </div>
+		</div>
+		<button class="modal-button" type="submit" >Login</button>
+	   </form>
+	  </div>
+	  <li><?php  if(!isset($_SESSION['username'])) { ?>
+		   		<a class="modal-trigger" href="#signup">SIGN UP</a>
+		  <?php } ?>
+		  <?php  if(isset($_SESSION['username'])) { ?>
+		   		<a href="logout.php"> LOGOUT</a>
+		  <?php } ?>
+	  </li>
+	  <div id="signup" class="modal tagline">
+	    <form method="POST" action="index.php">
+		  <div class="modal-content m-container">
+			  <div class="avl-heading">
+				<h4>Sign Up</h4>
+				<div></div>
+			  </div>
+			  <div class="row">
+				<div class="input-field col s12 m6 l6">
+				  <input id="first_name" type="text" class="validate" name="first_name">
+				  <label for="first_name">First Name</label>
+				</div>
+				<div class="input-field col s12 m6 l6">
+				  <input id="last_name" type="text" class="validate" name="last_name">
+				  <label for="last_name">Last Name</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+				  <input id="email" type="text" class="validate" name="register_username">
+				  <label for="email">E-mail</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+				  <input id="password" type="text" class="validate" name="register_password">
+				  <label for="password">Password</label>
+				</div>
+				<div class="input-field col s12 m12 l12">
+				  <input id="mobno" type="text" class="validate" name="mobile_number">
+				  <label for="mobno">Mobile Number</label>
+				</div>
+				<div class="input-field col s12 m6 l6">
+				  <input id="city" type="text" class="validate" name="city">
+				  <label for="city">City</label>
+				</div>
+				<div class="input-field col s12 m6 l6">
+				  <input id="state" type="text" class="validate" name="state">
+				  <label for="state">State</label>
+				</div>
+			  </div>
+			  <div class="modal-footer ">
+				<button style="float: right;" class="modal-button" type="submit" >Sign Up</button>
+			  </div>
+		  </div>
+	    </form>
+	  </div>
+	</ul>
+  </div>
+  <div class="avl-container">
+	<div class="tagline">
+		<h4>Welcome to <span>your</span> humble abode</h4>
+		<h3>Choose form a large number of accomodations</h3>
+		<h3>to <span>feel at home away from home</span>.</h3>
+	</div>	
+  </div>
+	<footer class="page-footer">
+		<div class="avl-container">
+			<div class="row">
+				<div class="col l6 s12 pd-0">
+					<h4 class="white-text">AVL ROOMS</h4>
+					<p class="flow-text white-text">Choose form a large number of accomodations to feel at home away from home.</p>
+				</div>
+				<div class="col l2 offset-l1 s12 pd-0">
+					<h5 class="white-text">Navigate to</h5>
+					<ul>
+						<li>
+                            <?php if(isset($_SESSION['username'])) { ?>
+                                <a href="accomodate.php">Accomodate</a>
+                            <?php } ?>
+                            <?php  if(!isset($_SESSION['username'])) { ?>
+                                <a class="modal-trigger" href="#login">Accomodate</a>
+                            <?php } ?>
+                        </li>
+                        <li>
+                            <?php if(isset($_SESSION['username'])) { ?>
+                                <a class="modal-trigger" href="#">
+                                    <?php echo $first_name." ".$last_name ?>
+                                </a>
+                            <?php } ?>
+                            <?php  if(!isset($_SESSION['username'])) { ?>
+                                <a class="modal-trigger" href="#login">Login</a>
+                            <?php } ?>
+                        </li>
+                        <li>
+                            <?php if(isset($_SESSION['username'])) { ?>
+                                <a href="logout.php">Sign Out</a>
+                            <?php } ?>
+                            <?php  if(!isset($_SESSION['username'])) { ?>
+                                <a class="modal-trigger" href="#signuo">Sign Up</a>
+                            <?php } ?>
+                        </li>
+						<li><a href="#!">Contact</a></li>
+					</ul>
+				</div>
+				<div class="col l3 s12 pd-0">
+					<h5 class="white-text">Accomodations</h5>
+					<ul>
+						<li><a href="#!">Bangalore</a></li>
+						<li><a href="#!">Delhi</a></li>
+						<li><a href="#!">Mumbai</a></li>
+						<li><a href="#!">Chennai</a></li>
+						<li><a href="#!">Hyderabad</a></li>
+						<li><a href="#!">Pune</a></li>
+						<li><a href="#!">Ahmedabad</a></li>
+						<li><a href="#!">Kolkata</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="avl-container">
+			© 2017 Copyright Text
+			<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+			</div>
+			</div>
+	</footer>
+  <script>
+  $(document).ready(function(){
+   $('#moveInDate').dcalendarpicker();
+  });
+  </script>	
+
+  
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.bg{
+    background-color: whitesmoke;
+}
+
+.left{
+    margin-top: 60px;
+}
+
+.left h3{
+    font-size: 40px;
+}
+.left img{
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+}
+.left p{
+    font-size: 15px;
+}
+.right{
+    height: auto;
+    width: 600px ;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    background: white;
+    border-radius: 7px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .3); 
+}
