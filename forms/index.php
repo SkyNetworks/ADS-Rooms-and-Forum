@@ -38,7 +38,7 @@
            ?>
 
             <div class="container-fluid mt-3 text-center bg-dark">
-                <p class="text-muted">Copyright &copy;2020, <a>Crush</a></p>
+                <p class="text-muted">Copyright &copy;2020, <a>divya</a></p>
             </div>
             <script src="js/jquery.js"></script>
             <script src="js/bootstrap.min.js"></script>
